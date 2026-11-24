@@ -4,7 +4,7 @@
 
 O **Amar ao Próximo** é um projeto acadêmico desenvolvido com o objetivo de apoiar organizações sociais no gerenciamento de doações destinadas a famílias em situação de vulnerabilidade.
 
-A proposta é facilitar a organização de alimentos, roupas e outros produtos recebidos, contribuindo para uma distribuição mais eficiente e transparente.
+A proposta é facilitar a organização de alimentos, roupas, alimentos e mantimentos para ajudar o próximo
 
 ## Objetivo do projeto
 
@@ -81,3 +81,66 @@ API: http://localhost:3000/api/health
 ## Projeto acadêmico
 
 Projeto desenvolvido como atividade de aprendizagem em desenvolvimento web, com foco na aplicação prática de tecnologias frontend e backend.
+
+## Testando a API
+
+Com o servidor Express em execução, acesse:
+
+http://localhost:3000/api/health
+
+A API deverá retornar uma resposta JSON semelhante a:
+
+```json
+{
+  "status": "ok",
+  "app": "Amar ao Próximo",
+  "hora": "23/11/2026, 22:19:00"
+}
+```
+
+A data e a hora são geradas automaticamente,
+utilizando o horário de São Paulo.
+
+## Verificação do frontend
+
+Com o frontend e a API em execução, acesse:
+
+http://localhost:5173
+
+A página inicial deverá apresentar:
+
+- Nome do projeto: Amar ao Próximo
+- Descrição: Sistema de Gestão de Doações
+- Status da API: ok
+- Data e hora da resposta da API
+
+## Teste de funcionamento
+
+Para verificar se a API está funcionando, inicie o servidor:
+
+```bash
+vp run api
+```
+
+Depois, acesse no navegador:
+
+http://localhost:3000/api/health
+
+A resposta deverá apresentar o status "ok",
+o nome da aplicação e a data e hora da consulta.
+
+## Verificação da página inicial
+
+Em outro terminal, execute:
+
+```bash
+vp dev
+```
+
+Acesse:
+
+http://localhost:5173
+
+A página deverá mostrar o nome "Amar ao Próximo",
+a descrição "Sistema de Gestão de Doações"
+e o status da API acompanhado da data e hora.
