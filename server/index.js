@@ -2,17 +2,23 @@ import "dotenv/config";
 import express from "express";
 
 const app = express();
+
 app.use(express.json());
 
 app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
     app: "Amar ao Próximo",
-    hora: new Date().toISOString(),
+    hora: new Date().toLocaleString("pt-BR", {
+      timeZone: "America/Sao_Paulo",
+      dateStyle: "short",
+      timeStyle: "medium",
+    }),
   });
 });
 
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
   console.log(`API rodando em http://localhost:${PORT}`);
 });
